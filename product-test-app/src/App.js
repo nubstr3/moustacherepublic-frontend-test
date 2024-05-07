@@ -2,6 +2,12 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import './App.css';
 
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
 const API_URL = 'https://3sb655pz3a.execute-api.ap-southeast-2.amazonaws.com/live/product';
 
 const App = () => {
@@ -26,12 +32,11 @@ const App = () => {
     
     return (
         <div className='app'>
-            <h1 className='EcommerceName'>Ecommerce Name</h1>
-
-            <container className='navbar'>
-
-            </container>
-
+            <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand>HelloWorld</Navbar.Brand>
+                </Container>
+            </Navbar>
             <div className='productPage'>
                 <h2 className='title'>
                     {product1.title}
